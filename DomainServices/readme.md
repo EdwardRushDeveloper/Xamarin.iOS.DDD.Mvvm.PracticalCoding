@@ -1,19 +1,16 @@
-#MySpectrum Example Application (Xamarin – Practical Coding Test)
+#Domain Service Assembly
 
-The MySpectrum Example Application by Edward Rush.
+
+The Domain Service Assembly provides access to the Application Repository as well a operations that do not fit with the Application Services Layer, nor in the Domain Layer.
+
 
 
 
 
 |Project Name|Project Description|
 |-----|-----|
-|MySpectrum|Example application implementing Domain Driven Design concepts introduced and explained by Eric Evans in his book Domain Driven Design - Tackling complexity in the Heart of Software. This example also using MVVM implemented using MvvmLight|
+|DomainServices|Repositories, Factories, Domain Services. This is C# code shared for the iOS and Android compiled Applications. This Project dependencies should be limited to Database, File and Serialization and Deserialization operations.|
 
-
-
-[![DDD](ddd.ericevans.jpeg)](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=asc_df_0321125215/?tag=hyprod-20&linkCode=df0&hvadid=312118197030&hvpos=1o1&hvnetw=g&hvrand=11296038046622538557&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9009924&hvtargid=pla-449269547899&psc=1)
-
-[MvvmLight on GitHub](https://github.com/lbugnion/mvvmlight)
 
 See explanation of all layers below.
 

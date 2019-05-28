@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainTableViewController" customModuleProvider="" sceneMemberID="viewController" storyboardIdentifier="MainTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="401" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="TableContainerView">
+                                <rect key="frame" x="25" y="41" width="364" height="478"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0.87876457253886" alpha="1"/>
+                                <constraints>
+                                    <constraint id="422" firstAttribute="width" constant="364"/>
+                                    <constraint id="427" firstAttribute="height" constant="478"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="656" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="AddUserButton">
+                                <rect key="frame" x="288" y="535" width="82" height="30"/>
+                                <state key="normal" title="Add User"/>
+                                <constraints>
+                                    <constraint id="657" firstAttribute="height" constant="30"/>
+                                    <constraint id="658" firstAttribute="width" constant="82"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnTouchUpInside:" destination="BYZ-38-t0r" id="661" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5148" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="MainScreenImageView" image="spectrum.listscreen.png">
+                                <rect key="frame" x="25" y="535" width="262" height="155"/>
+                                <constraints>
+                                    <constraint id="5149" firstAttribute="height" constant="155"/>
+                                    <constraint id="5150" firstAttribute="width" constant="262"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="432" firstAttribute="trailingMargin" secondItem="401" secondAttribute="trailing" constant="5"/>
+                            <constraint id="437" firstItem="401" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5"/>
+                            <constraint id="442" firstItem="401" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21"/>
+                            <constraint id="659" firstItem="656" firstAttribute="top" secondItem="401" secondAttribute="bottom" constant="16"/>
+                            <constraint id="660" firstItem="656" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="268"/>
+                            <constraint id="5153" firstItem="5148" firstAttribute="top" secondItem="401" secondAttribute="bottom" constant="16"/>
+                            <constraint id="5154" firstItem="5148" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TableContainerView" destination="401" id="name-outlet-401"/>
+                        <outlet property="AddUserButton" destination="656" id="name-outlet-656"/>
+                        <outlet property="MainScreenImageView" destination="5148" id="name-outlet-5148"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <scene sceneID="887">
+            <objects>
+                <viewController id="888" sceneMemberID="viewController" customClass="AddUserViewController" storyboardIdentifier="AddUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="885"/>
+                        <viewControllerLayoutGuide type="bottom" id="886"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="889">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="894" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="UserInputContainerView">
+                                <rect key="frame" x="25" y="41" width="364" height="478"/>
+                                <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0.87876457253886" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="902" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="FirstNameLabel">
+                                        <rect key="frame" x="25" y="60" width="201" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="904" firstAttribute="width" constant="201"/>
+                                            <constraint id="905" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="903" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="FirstNameText" placeholder="First Name">
+                                        <rect key="frame" x="30" y="97" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <constraints>
+                                            <constraint id="908" firstAttribute="height" constant="30"/>
+                                            <constraint id="909" firstAttribute="width" secondItem="903" secondAttribute="height" multiplier="152:15"/>
+                                        </constraints>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="914" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="LastNameLabel">
+                                        <rect key="frame" x="25" y="157" width="201" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="915" firstAttribute="width" constant="201"/>
+                                            <constraint id="916" firstAttribute="height" constant="21"/>
+                                            <constraint id="917" firstAttribute="width" secondItem="914" secondAttribute="height" multiplier="67:7"/>
+                                            <constraint id="918" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="927" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="LastNameText" placeholder="Last Name">
+                                        <rect key="frame" x="30" y="198" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <constraints>
+                                            <constraint id="928" firstAttribute="height" constant="30"/>
+                                            <constraint id="929" firstAttribute="width" secondItem="927" secondAttribute="height" multiplier="152:15"/>
+                                        </constraints>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="936" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="PasswordLabel">
+                                        <rect key="frame" x="25" y="248" width="201" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="937" firstAttribute="width" constant="201"/>
+                                            <constraint id="938" firstAttribute="height" constant="21"/>
+                                            <constraint id="939" firstAttribute="width" secondItem="936" secondAttribute="height" multiplier="67:7"/>
+                                            <constraint id="940" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="945" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="PasswordText" placeholder="Password">
+                                        <rect key="frame" x="30" y="289" width="304" height="30"/>
+                                        <nil key="textColor"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <constraints>
+                                            <constraint id="946" firstAttribute="height" constant="30"/>
+                                            <constraint id="947" firstAttribute="width" secondItem="945" secondAttribute="height" multiplier="152:15"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2796" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="SubmitButton">
+                                        <rect key="frame" x="243" y="355" width="91" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <constraints>
+                                            <constraint id="2797" firstAttribute="height" constant="30"/>
+                                            <constraint id="2798" firstAttribute="width" constant="91"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="OnSubmit:" destination="888" id="2802" eventType="touchUpInside"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2803" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="StatusMessageLabel" numberOfLines="6">
+                                        <rect key="frame" x="25" y="355" width="201" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" colorSpace="custom" customColorSpace="sRGB" red="1" green="0.259276390075684" blue="0.240936130285263" alpha="1"/>
+                                        <constraints>
+                                            <constraint id="2804" firstAttribute="height" constant="100"/>
+                                            <constraint id="2805" firstAttribute="width" constant="201"/>
+                                        </constraints>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4802" translatesAutoresizingMaskIntoConstraints="NO" restorationIdentifier="CancelButton">
+                                        <rect key="frame" x="243" y="393" width="91" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <constraints>
+                                            <constraint id="4805" firstAttribute="height" constant="30"/>
+                                            <constraint id="4806" firstAttribute="width" constant="91"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="OnSubmit:" destination="4804" id="4803" eventType="touchUpInside"/>
+                                            <action selector="OnCancel:" destination="888" id="4811" eventType="touchUpInside"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="895" firstAttribute="width" constant="364"/>
+                                    <constraint id="896" firstAttribute="height" constant="478"/>
+                                    <constraint id="898" firstAttribute="height" constant="478"/>
+                                    <constraint id="899" firstAttribute="width" secondItem="894" secondAttribute="height" multiplier="182:239"/>
+                                    <constraint id="906" firstItem="902" firstAttribute="top" secondItem="894" secondAttribute="top" constant="60"/>
+                                    <constraint id="907" firstItem="902" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="25"/>
+                                    <constraint id="910" firstItem="903" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="30"/>
+                                    <constraint id="911" firstItem="903" firstAttribute="top" secondItem="902" secondAttribute="bottom" constant="16"/>
+                                    <constraint id="923" firstItem="914" firstAttribute="top" secondItem="903" secondAttribute="bottom" constant="30"/>
+                                    <constraint id="924" firstItem="914" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="25"/>
+                                    <constraint id="930" firstItem="927" firstAttribute="top" secondItem="914" secondAttribute="bottom" constant="20"/>
+                                    <constraint id="931" firstItem="927" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="30"/>
+                                    <constraint id="941" firstItem="936" firstAttribute="top" secondItem="927" secondAttribute="bottom" constant="20"/>
+                                    <constraint id="942" firstItem="936" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="25"/>
+                                    <constraint id="948" firstItem="945" firstAttribute="top" secondItem="936" secondAttribute="bottom" constant="20"/>
+                                    <constraint id="949" firstItem="945" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="30"/>
+                                    <constraint id="2799" firstItem="2796" firstAttribute="top" secondItem="945" secondAttribute="bottom" constant="36"/>
+                                    <constraint id="2800" firstItem="2796" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="243"/>
+                                    <constraint id="2806" firstItem="2803" firstAttribute="top" secondItem="945" secondAttribute="bottom" constant="36"/>
+                                    <constraint id="2807" firstItem="2803" firstAttribute="leading" secondItem="894" secondAttribute="leading" constant="25"/>
+                                    <constraint id="4809" firstItem="4802" firstAttribute="top" secondItem="2796" secondAttribute="bottom" constant="8"/>
+                                    <constraint id="4810" firstItem="4802" firstAttribute="leading" secondItem="2803" secondAttribute="trailing" constant="17"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="900" firstItem="894" firstAttribute="top" secondItem="885" secondAttribute="bottom" constant="21"/>
+                            <constraint id="901" firstItem="894" firstAttribute="leading" secondItem="889" secondAttribute="leadingMargin" constant="5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="UserInputContainerView" destination="894" id="name-outlet-894"/>
+                        <outlet property="FirstNameText" destination="903" id="name-outlet-903"/>
+                        <outlet property="FirstNameLabel" destination="902" id="name-outlet-902"/>
+                        <outlet property="LastNameLabel" destination="914" id="name-outlet-914"/>
+                        <outlet property="LastNameText" destination="927" id="name-outlet-927"/>
+                        <outlet property="PasswordLabel" destination="936" id="name-outlet-936"/>
+                        <outlet property="PasswordText" destination="945" id="name-outlet-945"/>
+                        <outlet property="SubmitButton" destination="2796" id="name-outlet-2796"/>
+                        <outlet property="StatusMessageLabel" destination="2803" id="name-outlet-2803"/>
+                        <outlet property="CancelButton" destination="4802" id="name-outlet-4802"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="890" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spectrum.listscreen.png" width="500" height="263"/>
+    </resources>
+</document>
